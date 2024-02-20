@@ -5,13 +5,13 @@
 
 // import {WhateverSavesTheTransientState} from "./dataAccess.js" //NEEDS REAL FUNCTION NAME
 
-const handleFinishedBrew = () => {
+const handleFinishedBrew = (clickEvent) => {
     if (clickEvent.target.id === "finishBrew") {
         // WhateverSavesTheTransientState()                    //NEEDS REAL FUNCTION NAME
     }
 }
 
-export const finishButton = () => {
+export const FinishButton = () => {
     document.addEventListener("click", handleFinishedBrew)
 
     return `<div><button id="finishBrew">Finish</button></div>`
