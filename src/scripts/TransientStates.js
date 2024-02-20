@@ -7,8 +7,8 @@ let craftRequestTransientState = {
 }
 
 let finishBrewTransientState = {
-    "crafterId": 0,
-    "craftRequestedId": 0,
+    "crafterId": 2,
+    "craftRequestedId": 1,
     "ingredientsId": []
 }
 
@@ -37,9 +37,14 @@ export const setBrewCrafterChoice = (choiceMade) => {
     console.log(finishBrewTransientState)
 }
 
-export const setBrewIngredientsChoice = (choiceMade) => {
-    finishBrewTransientState.ingredientsId =  choiceMade
+export const addBrewIngredientsChoice = (choiceMade) => {
+    finishBrewTransientState.ingredientsId.push(choiceMade)
     console.log(finishBrewTransientState)
+}
+
+export const removeBrewIngredientChoice = (choiceMade) => {
+    const index = finishBrewTransientState.ingredientsId.indexOf(choiceMade)
+    finishBrewTransientState.ingredientsId.splice(index, 1)
 }
 
 export const saveCraftSubmission = async () => {
@@ -50,22 +55,46 @@ export const saveCraftSubmission = async () => {
         },
         body: JSON.stringify(craftRequestTransientState)
     }
-    const response = await fetch("http://localhost:8088/craftRequests", postOptions)
+    await fetch("http://localhost:8088/craftRequests", postOptions)
 
     const customCraftEvent = new CustomEvent("newCraftCreated")
     document.dispatchEvent(customCraftEvent)
 }
 
 export const saveBrewSubmission = async () => {
+    const completionObject = {
+        craftRequestedId: finishBrewTransientState.craftRequestedId,
+        crafterId: finishBrewTransientState.crafterId
+    }
     const postOptions = {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(finishBrewTransientState)
+        body: JSON.stringify(completionObject)
     }
     const response = await fetch("http://localhost:8088/completions", postOptions)
+    
 
     const finishedBrewEvent = new CustomEvent("newBrewCreated")
     document.dispatchEvent(finishedBrewEvent)
+
+    const completionsArray = await fetch("http://localhost:8088/completions").then(res => res.json())
+    const completionsLength = completionsArray.length
+
+    for (const ingredientId of finishBrewTransientState.ingredientsId) {
+        const objectIngredient = {
+            ingredientId: ingredientId,
+            completionId: completionsLength
+        }
+        const ingredientPostOptions = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(objectIngredient)
+        }
+        await fetch("ttp://localhost:8088/craftIngredients", ingredientPostOptions)
+    }
+
 }
