@@ -10,13 +10,13 @@
 */
 
 import { GnomeMercy } from "./GnomeMercy.js";
-import { PurposeFormField } from "./PurposeFormField.js";
+//import { Ingredients } from "./Ingredients.js";
 
 const mainContainer = document.querySelector("#container");
 
-const render = () =>
+const render = async () =>
 {
-    mainContainer.innerHTML = PurposeFormField()
+    //mainContainer.innerHTML = await Ingredients()
 };
 
 render();
