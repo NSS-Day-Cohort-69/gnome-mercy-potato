@@ -9,14 +9,15 @@
     HTML again.
 */
 
+//import { Completions } from "./Completions.js";
 import { GnomeMercy } from "./GnomeMercy.js";
 //import { Ingredients } from "./Ingredients.js";
 
 const mainContainer = document.querySelector("#container");
 
-const render = async () =>
+const render = async() =>
 {
-    //mainContainer.innerHTML = await Ingredients()
+    //mainContainer.innerHTML = await Completions()
 };
 
 render();
