@@ -30,7 +30,7 @@ export const Ingredients = async () =>
   const ingredients = await getIngredients()
 
   let returnHTML = `<div class="ingredients">`
-  returnHTML += `<h2>Crafting Ingredients</h2>`
+  returnHTML += `<h3>Crafting Ingredients</h3>`
   returnHTML += ingredients.map(ingredient => `
   <input type="checkbox" name="ingredient${ingredient.id}" value="${ingredient.id}" data-type="ingredient">
   <label for="ingredient${ingredient.id}">${ingredient.name}</label><br>

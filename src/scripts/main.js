@@ -15,7 +15,7 @@ const mainContainer = document.querySelector("#container");
 
 const render = async () =>
 {
-    mainContainer.innerHTML = await Ingredients()
+    //mainContainer.innerHTML = await Ingredients()
 };
 
 render();
