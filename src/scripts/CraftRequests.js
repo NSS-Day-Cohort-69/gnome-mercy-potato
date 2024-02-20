@@ -1,3 +1,5 @@
+import { setCraftRequestId } from "./dataAccess.js"
+
 // Returns an Array of Craft Requests that does NOT include any Requests that have already been completed
 const filterCraftRequests = (craftRequestsArray, completionsArray) => {
   const filteredCraftRequests = []
@@ -23,7 +25,7 @@ const filterCraftRequests = (craftRequestsArray, completionsArray) => {
 
 // Generates the HTML for the dropdown list of Crafting Requests
 const generateDropdownHTML = (craftRequestsArray) => {
-  let craftRequestsHTML = `<select class="dropdown">`
+  let craftRequestsHTML = `<select class="dropdown" id="craftRequestList">`
 
   craftRequestsHTML += `<option value="0" selected disabled hidden>--Choose A Request--</option>`
 
@@ -50,3 +52,14 @@ export const CraftRequests = async () => {
 
   return craftRequestsHTML
 }
+
+const changeHandler = (changeEvent) => {
+  const eventTarget = changeEvent.target
+  const eventTargetValue = parseInt(eventTarget.value)
+
+  if (eventTarget.id === "craftRequestList") {
+    setCraftRequestId(eventTargetValue)
+  }
+}
+
+document.addEventListener("change", changeHandler)
