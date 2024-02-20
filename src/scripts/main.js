@@ -15,7 +15,14 @@ const mainContainer = document.querySelector("#container");
 
 const render = async () =>
 {
-    //mainContainer.innerHTML = await Ingredients()
+    /*
+          Fetch all of the database so that it's stored in 
+          application state. After all data is fetched, 
+          invoke GnomeMercy component to kick off the conversion
+          of state to HTML
+      */
+    const mainHTML = await GnomeMercy()
+    mainContainer.innerHTML = mainHTML
 };
 
 render();
