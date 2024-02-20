@@ -7,8 +7,8 @@ let craftRequestTransientState = {
 }
 
 let finishBrewTransientState = {
-    "crafterId": 0,
-    "craftRequestedId": 0,
+    "crafterId": 2,
+    "craftRequestedId": 1,
     "ingredientsId": []
 }
 
@@ -62,15 +62,39 @@ export const saveCraftSubmission = async () => {
 }
 
 export const saveBrewSubmission = async () => {
+    const completionObject = {
+        craftRequestedId: finishBrewTransientState.craftRequestedId,
+        crafterId: finishBrewTransientState.crafterId
+    }
     const postOptions = {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(finishBrewTransientState)
+        body: JSON.stringify(completionObject)
     }
-    await fetch("http://localhost:8088/completions", postOptions)
+    const response = await fetch("http://localhost:8088/completions", postOptions)
+    
 
     const finishedBrewEvent = new CustomEvent("newBrewCreated")
     document.dispatchEvent(finishedBrewEvent)
+
+    const completionsArray = await fetch("http://localhost:8088/completions").then(res => res.json())
+    const completionsLength = completionsArray.length
+
+    for (const ingredientId of finishBrewTransientState.ingredientsId) {
+        const objectIngredient = {
+            ingredientId: ingredientId,
+            completionId: completionsLength
+        }
+        const ingredientPostOptions = {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(objectIngredient)
+        }
+        await fetch("ttp://localhost:8088/craftIngredients", ingredientPostOptions)
+    }
+
 }

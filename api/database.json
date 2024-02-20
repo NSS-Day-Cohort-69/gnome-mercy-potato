@@ -173,6 +173,51 @@
       "crafterId": 2,
       "craftRequestId": 1,
       "id": 7
+    },
+    {
+      "craftRequestedId": 1,
+      "crafterId": 2,
+      "id": 8
+    },
+    {
+      "craftRequestedId": 1,
+      "crafterId": 2,
+      "id": 9
+    },
+    {
+      "craftRequestedId": 1,
+      "crafterId": 2,
+      "id": 10
+    },
+    {
+      "craftRequestedId": 1,
+      "crafterId": 2,
+      "id": 11
+    },
+    {
+      "craftRequestedId": 1,
+      "crafterId": 2,
+      "id": 12
+    },
+    {
+      "craftRequestedId": 1,
+      "crafterId": 2,
+      "id": 13
+    },
+    {
+      "craftRequestedId": 1,
+      "crafterId": 2,
+      "id": 14
+    },
+    {
+      "craftRequestedId": 1,
+      "crafterId": 2,
+      "id": 15
+    },
+    {
+      "craftRequestedId": 1,
+      "crafterId": 2,
+      "id": 16
     }
   ],
   "craftIngredients": [
