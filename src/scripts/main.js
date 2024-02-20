@@ -15,7 +15,7 @@ import { GnomeMercy } from "./GnomeMercy.js";
 
 const mainContainer = document.querySelector("#container");
 
-const render = async() =>
+const render = async () =>
 {
     //mainContainer.innerHTML = await Completions()
 };
