@@ -4,11 +4,20 @@
     store each choice in transient state.
 */
 
+//import { addBrewIngredientsChoice, removeBrewIngredientsChoice } from "./dataAccess.js"
+
 const onIngredientChanged = (event) =>
 {
+  const checkbox = event.target
   if(event.target.dataset.type === "ingredient")
   {
-    //do transient stuff 
+    if(checkbox.checked)
+    {
+      //addBrewIngredientsChoice(event.target.value)
+    } else
+    {
+      //removeBrewIngredientsChoice(event.target.value)
+    }
   }
 }
 
