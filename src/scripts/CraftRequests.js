@@ -1,4 +1,4 @@
-import { setCraftRequestId } from "./dataAccess.js"
+// import { setCraftRequestId } from "./dataAccess.js"
 
 // Returns an Array of Craft Requests that does NOT include any Requests that have already been completed
 const filterCraftRequests = (craftRequestsArray, completionsArray) => {
@@ -53,6 +53,7 @@ export const CraftRequests = async () => {
   return craftRequestsHTML
 }
 
+// Updates transient state to the most recent Craft Request selection
 const changeHandler = (changeEvent) => {
   const eventTarget = changeEvent.target
   const eventTargetValue = parseInt(eventTarget.value)
