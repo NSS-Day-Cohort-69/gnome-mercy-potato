@@ -37,9 +37,14 @@ export const setBrewCrafterChoice = (choiceMade) => {
     console.log(finishBrewTransientState)
 }
 
-export const setBrewIngredientsChoice = (choiceMade) => {
-    finishBrewTransientState.ingredientsId =  choiceMade
+export const addBrewIngredientsChoice = (choiceMade) => {
+    finishBrewTransientState.ingredientsId.push(choiceMade)
     console.log(finishBrewTransientState)
+}
+
+export const removeBrewIngredientChoice = (choiceMade) => {
+    const index = finishBrewTransientState.ingredientsId.indexOf(choiceMade)
+    finishBrewTransientState.ingredientsId.splice(index, 1)
 }
 
 export const saveCraftSubmission = async () => {
