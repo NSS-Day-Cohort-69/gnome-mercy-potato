@@ -55,7 +55,7 @@ export const saveCraftSubmission = async () => {
         },
         body: JSON.stringify(craftRequestTransientState)
     }
-    const response = await fetch("http://localhost:8088/craftRequests", postOptions)
+    await fetch("http://localhost:8088/craftRequests", postOptions)
 
     const customCraftEvent = new CustomEvent("newCraftCreated")
     document.dispatchEvent(customCraftEvent)
@@ -69,7 +69,7 @@ export const saveBrewSubmission = async () => {
         },
         body: JSON.stringify(finishBrewTransientState)
     }
-    const response = await fetch("http://localhost:8088/completions", postOptions)
+    await fetch("http://localhost:8088/completions", postOptions)
 
     const finishedBrewEvent = new CustomEvent("newBrewCreated")
     document.dispatchEvent(finishedBrewEvent)
