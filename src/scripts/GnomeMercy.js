@@ -25,14 +25,8 @@ export const GnomeMercy = async () => {
     </div>
     
     <article id="crafting">
-      <div class="crafting--column">
-        <section class="section">
-          ${craftRequestsHTML}
-        </section>
-      </div>
-      <div class="crafting--column">
-
-      </div>
+      ${CraftFormHTML}
+      ${craftRequestsHTML}
     </article>
     
     <article class="section" id="completions">
