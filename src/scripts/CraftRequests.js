@@ -25,9 +25,9 @@ const filterCraftRequests = (craftRequestsArray, completionsArray) => {
 
 // Generates the HTML for the dropdown list of Crafting Requests
 const generateDropdownHTML = (craftRequestsArray) => {
-  let craftRequestsHTML = `<div id="craftRequests"><h2 class="section--header">Craft Requests</h2>`
+  let craftRequestsHTML = `<h3>Craft Requests</h3>`
 
-  craftRequestsHTML += `<select class="dropdown" id="craftRequestList">`
+  craftRequestsHTML += `<select id="craftRequestList">`
 
   craftRequestsHTML += `<option value="0" selected disabled hidden>--Choose A Request--</option>`
 
@@ -35,7 +35,7 @@ const generateDropdownHTML = (craftRequestsArray) => {
 
   craftRequestsHTML += optionStringArray.join()
 
-  craftRequestsHTML += `</select></div>`
+  craftRequestsHTML += `</select>`
 
   return craftRequestsHTML
 }
