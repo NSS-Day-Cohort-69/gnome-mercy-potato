@@ -27,4 +27,5 @@ const render = async () =>
 
 render();
 
+document.addEventListener("newBrewCreated", render)
 document.addEventListener("newCraftCreated", render)
