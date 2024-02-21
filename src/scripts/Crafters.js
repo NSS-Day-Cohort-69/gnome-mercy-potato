@@ -4,13 +4,36 @@
     selected, update transient state.
 */
 
-export const Crafters = () => {
-  // const crafters = getCrafters();
+//import { setBrewCrafterChoice } "./TransientState.js"
 
-  return `
-    <h3>Crafters</h3>
-    <select id="crafter">
-        <option value="0">--Choose A Crafter--</option>
-    </select>
-  `;
-};
+const onCrafterChosen = (event) =>
+{
+  if(event.target.id === "crafter")
+  {
+    //setBrewCrafterChoice(event.target.value)
+  }
+}
+
+export const Crafters = async () =>
+{
+  document.addEventListener(
+    "change",
+    onCrafterChosen
+  )
+
+  const crafters = await getCrafters()
+  let returnHTML = `<div class="crafters">`
+  returnHTML += `<h3>Crafters</h3>`
+  returnHTML += `<select id="crafter">`
+  returnHTML += `<option value="0" selected disabled hidden>--Choose A Crafter--</option>`
+  returnHTML += crafters.map(crafter => `<option value=${crafter.id} >${crafter.name}</option>`).join("")
+  returnHTML += `</select>`
+  returnHTML += `</div>`
+
+  return returnHTML
+}
+
+const getCrafters = () =>
+{
+  return fetch("http://localhost:8088/crafters").then(res => res.json())
+}
