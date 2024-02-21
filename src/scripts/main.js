@@ -28,5 +28,4 @@ const render = async () =>
 render();
 
 document.addEventListener("newBrewCreated", render)
-
-// Listen for state changes and invoke render() when it does
+document.addEventListener("newCraftCreated", render)
