@@ -1,4 +1,4 @@
-// import { setCraftRequestId } from "./dataAccess.js"
+import { setBrewCraftChoice } from "./TransientStates.js"
 
 // Returns an Array of Craft Requests that does NOT include any Requests that have already been completed
 const filterCraftRequests = (craftRequestsArray, completionsArray) => {
@@ -61,7 +61,7 @@ const changeHandler = (changeEvent) => {
   const eventTargetValue = parseInt(eventTarget.value)
 
   if (eventTarget.id === "craftRequestList") {
-    setCraftRequestId(eventTargetValue)
+    setBrewCraftChoice(eventTargetValue)
   }
 }
 
