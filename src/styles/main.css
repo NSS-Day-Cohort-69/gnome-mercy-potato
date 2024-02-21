@@ -55,3 +55,8 @@ button {
 	margin-top: .5rem;
 	cursor: pointer;
 }
+
+.formSection {
+	width: 65%;
+	margin: auto;
+}

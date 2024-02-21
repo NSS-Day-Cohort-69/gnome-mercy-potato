@@ -7,7 +7,7 @@ document.addEventListener("change", (event) => {
 
 export const NameFormField = () => {
   return `
-      <label class="label section" for="name">Name</label>
-      <input placeholder="What's the potions name?" type="text" data-id="name" class="input section">
+      <label class="label formSection" for="name">Name</label>
+      <input placeholder="What's the potions name?" type="text" data-id="name" class="input formSection">
       `;
 };

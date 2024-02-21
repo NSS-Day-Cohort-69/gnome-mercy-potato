@@ -10,8 +10,10 @@ import { Completions } from "./Completions.js";
 import { NameFormField } from "./NameFormField.js";
 import { PurposeFormField } from "./PurposeFormField.js";
 import { TypeField } from "./TypeField.js";
+import { CraftForm } from "./CraftForm.js";
 
 export const GnomeMercy = async () => {
+  const CraftFormHTML = await CraftForm();
   const craftRequestsHTML = await CraftRequests();
   const CompletionsHTML = await Completions();
   const brewTypeField = await TypeField();
@@ -24,12 +26,11 @@ export const GnomeMercy = async () => {
       ${brewTypeField}
     </div>
     
-    <article id="crafting">
+    <article class="formSection" id="crafting">
       ${CraftFormHTML}
-      ${craftRequestsHTML}
     </article>
     
-    <article class="section" id="completions">
+    <article class="formSection" id="completions">
       ${CompletionsHTML}
     </article>`;
 };

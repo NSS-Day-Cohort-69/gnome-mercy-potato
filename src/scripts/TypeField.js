@@ -9,8 +9,8 @@ export const TypeField = async () => {
     res.json()
   );
   let html = `
-  <label class="section" for="type">Type</label>
-    <select data-id="TypeFieldForm" class="section">
+  <label class="formSection" for="type">Type</label>
+    <select data-id="TypeFieldForm" class="formSection">
         <option value="0" data-name="brewOption" selected disabled hidden>Select a type</option>`;
 
   const htmlArray = response.map((brew) => {
