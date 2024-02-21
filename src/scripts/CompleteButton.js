@@ -5,10 +5,8 @@
 */
 //import { saveCraftSubmission } from "./dataAccess.js"
 
-const onSubmitRequestPressed = (event) =>
-{
-  if(event.target.id === "submit-request")
-  {
+const onSubmitRequestPressed = (event) => {
+  if (event.target.id === "submit-request") {
     /*
     if(craftSubmissionIsValid)
     {
@@ -19,16 +17,12 @@ const onSubmitRequestPressed = (event) =>
     }
     */
   }
-}
+};
 
-export const CompleteButton = () =>
-{
-  document.addEventListener(
-    "mouseup",
-    onSubmitRequestPressed
-  )
+export const CompleteButton = () => {
+  document.addEventListener("mouseup", onSubmitRequestPressed);
 
-  let returnHTML = `<button class="complete-button__button" id="submit-request">Submit Request</button>`
+  let returnHTML = `<button class="complete-button__button " id="submit-request">Submit Request</button>`;
 
-  return returnHTML
-}
+  return returnHTML;
+};
