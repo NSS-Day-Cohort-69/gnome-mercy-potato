@@ -7,9 +7,9 @@ let craftRequestTransientState = {
 }
 
 let finishBrewTransientState = {
-    "crafterId": 2,
-    "craftRequestedId": 1,
-    "ingredientsId": [1, 2, 3]
+    "crafterId": 0,
+    "craftRequestedId": 0,
+    "ingredientsId": []
 }
 
 export const setCraftNameChoice = (choiceMade) =>
@@ -54,6 +54,8 @@ export const removeBrewIngredientChoice = (choiceMade) =>
     finishBrewTransientState.ingredientsId.splice(index, 1)
 }
 
+
+
 export const saveCraftSubmission = async () =>
 {
     const postOptions = {
@@ -75,6 +77,10 @@ export const saveBrewSubmission = async () =>
         craftRequestedId: finishBrewTransientState.craftRequestedId,
         crafterId: finishBrewTransientState.crafterId
     }
+    if (completionObject.craftRequestedId === 0 || completionObject.crafterId === 0) {
+        window.alert("Invalid completion or crafter")
+        return
+    }
     const postOptions = {
         method: "POST",
         headers: {
@@ -82,8 +88,8 @@ export const saveBrewSubmission = async () =>
         },
         body: JSON.stringify(completionObject)
     }
-    const response = await fetch("http://localhost:8088/completions", postOptions)
-
+    await fetch("http://localhost:8088/completions", postOptions)
+    
 
     const finishedBrewEvent = new CustomEvent("newBrewCreated")
     document.dispatchEvent(finishedBrewEvent)

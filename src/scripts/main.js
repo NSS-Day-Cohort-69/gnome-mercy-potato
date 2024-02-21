@@ -10,10 +10,8 @@
 */
 
 import { GnomeMercy } from "./GnomeMercy.js";
-import { saveBrewSubmission } from "./TransientStates.js";
 
 const mainContainer = document.querySelector("#container");
-saveBrewSubmission()
 
 const render = async () =>
 {
