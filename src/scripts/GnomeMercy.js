@@ -5,11 +5,11 @@
     components.
 */
 
-import { CraftRequests } from "./CraftRequests.js";
 import { Completions } from "./Completions.js"
+import { CraftForm } from "./CraftForm.js";
 
 export const GnomeMercy = async () => {
-  const craftRequestsHTML = await CraftRequests()
+  const CraftFormHTML = await CraftForm()
   const CompletionsHTML = await Completions()
   
   return `
@@ -19,14 +19,7 @@ export const GnomeMercy = async () => {
     </article>
     
     <article id="crafting">
-      <div class="crafting--column">
-        <section class="section">
-          ${craftRequestsHTML}
-        </section>
-      </div>
-      <div class="crafting--column">
-
-      </div>
+      ${CraftFormHTML}
     </article>
     
     <article id="completions">
