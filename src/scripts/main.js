@@ -16,29 +16,6 @@ const mainContainer = document.querySelector("#container");
 
 const render = async () =>
 {
-    debugger
-    setCraftNameChoice("Name")
-    setCraftTypeChoice(2)
-    setCraftIntentChoice("To Use")
-
-    if(craftSubmissionIsValid())
-    {
-        await saveCraftSubmission()
-    }
-
-    setBrewCraftChoice(2)
-    setBrewCrafterChoice(1)
-    addBrewIngredientsChoice(3)
-    addBrewIngredientsChoice(2)
-    addBrewIngredientsChoice(1)
-    removeBrewIngredientChoice(4)
-    removeBrewIngredientChoice(2)
-    addBrewIngredientsChoice(4)
-
-    if(brewSubmissionIsValid())
-    {
-        await saveBrewSubmission()
-    }
     /*
           Fetch all of the database so that it's stored in 
           application state. After all data is fetched, 
