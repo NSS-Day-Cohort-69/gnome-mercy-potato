@@ -136,6 +136,12 @@
       "intendedUse": "Enable someone to hate another person",
       "craftTypeId": 2,
       "id": 8
+    },
+    {
+      "name": "Name",
+      "intendedUse": "To Use",
+      "craftTypeId": 2,
+      "id": 9
     }
   ],
   "completions": [
@@ -175,59 +181,9 @@
       "id": 7
     },
     {
-      "craftRequestedId": 1,
-      "crafterId": 2,
+      "craftRequestedId": 2,
+      "crafterId": 1,
       "id": 8
-    },
-    {
-      "craftRequestedId": 1,
-      "crafterId": 2,
-      "id": 9
-    },
-    {
-      "craftRequestedId": 1,
-      "crafterId": 2,
-      "id": 10
-    },
-    {
-      "craftRequestedId": 1,
-      "crafterId": 2,
-      "id": 11
-    },
-    {
-      "craftRequestedId": 1,
-      "crafterId": 2,
-      "id": 12
-    },
-    {
-      "craftRequestedId": 1,
-      "crafterId": 2,
-      "id": 13
-    },
-    {
-      "craftRequestedId": 1,
-      "crafterId": 2,
-      "id": 14
-    },
-    {
-      "craftRequestedId": 1,
-      "crafterId": 2,
-      "id": 15
-    },
-    {
-      "craftRequestedId": 1,
-      "crafterId": 2,
-      "id": 16
-    },
-    {
-      "craftRequestedId": 1,
-      "crafterId": 2,
-      "id": 17
-    },
-    {
-      "craftRequestedId": 0,
-      "crafterId": 0,
-      "id": 18
     }
   ],
   "craftIngredients": [
@@ -350,6 +306,16 @@
       "ingredientId": 4,
       "completionId": 7,
       "id": 24
+    },
+    {
+      "ingredientId": 3,
+      "completionId": 8,
+      "id": 25
+    },
+    {
+      "ingredientId": 4,
+      "completionId": 8,
+      "id": 26
     }
   ]
 }
