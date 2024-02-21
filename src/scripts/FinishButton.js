@@ -10,7 +10,6 @@ const handleFinishedBrew = (clickEvent) =>
 {
     if(clickEvent.target.id === "finishBrew")
     {
-        debugger
         if(brewSubmissionIsValid())
         {
             saveBrewSubmission()
