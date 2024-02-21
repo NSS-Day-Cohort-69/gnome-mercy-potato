@@ -5,7 +5,7 @@
 */
 
 export const Crafters = () => {
-  const crafters = getCrafters();
+  // const crafters = getCrafters();
 
   return `
     <h3>Crafters</h3>
