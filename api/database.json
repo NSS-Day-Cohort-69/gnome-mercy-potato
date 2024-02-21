@@ -136,6 +136,12 @@
       "intendedUse": "Enable someone to hate another person",
       "craftTypeId": 2,
       "id": 8
+    },
+    {
+      "name": "Name",
+      "intendedUse": "To Use",
+      "craftTypeId": 2,
+      "id": 9
     }
   ],
   "completions": [
@@ -173,6 +179,11 @@
       "crafterId": 2,
       "craftRequestId": 1,
       "id": 7
+    },
+    {
+      "craftRequestedId": 2,
+      "crafterId": 1,
+      "id": 8
     }
   ],
   "craftIngredients": [
@@ -295,6 +306,16 @@
       "ingredientId": 4,
       "completionId": 7,
       "id": 24
+    },
+    {
+      "ingredientId": 3,
+      "completionId": 8,
+      "id": 25
+    },
+    {
+      "ingredientId": 4,
+      "completionId": 8,
+      "id": 26
     }
   ]
 }
