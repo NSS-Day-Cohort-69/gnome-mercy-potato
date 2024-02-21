@@ -2,6 +2,10 @@
 
 /*Typography
 --------------------------------------------------------------*/
+body {
+	background-color: grey;
+}
+
 body,
 button,
 input,

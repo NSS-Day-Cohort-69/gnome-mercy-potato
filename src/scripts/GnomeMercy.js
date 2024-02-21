@@ -6,17 +6,23 @@
 */
 
 import { CraftRequests } from "./CraftRequests.js";
-import { Completions } from "./Completions.js"
+import { Completions } from "./Completions.js";
+import { NameFormField } from "./NameFormField.js";
+import { PurposeFormField } from "./PurposeFormField.js";
+import { TypeField } from "./TypeField.js";
 
 export const GnomeMercy = async () => {
-  const craftRequestsHTML = await CraftRequests()
-  const CompletionsHTML = await Completions()
-  
+  const craftRequestsHTML = await CraftRequests();
+  const CompletionsHTML = await Completions();
+  const brewTypeField = await TypeField();
+
   return `
     <h1>Gnome Mercy</h1>
-    <article id="request">
-      
-    </article>
+    <div id="request" class="flex column">
+      ${NameFormField()}
+      ${PurposeFormField()}
+      ${brewTypeField}
+    </div>
     
     <article id="crafting">
       <div class="crafting--column">
@@ -29,7 +35,7 @@ export const GnomeMercy = async () => {
       </div>
     </article>
     
-    <article id="completions">
+    <article class="section" id="completions">
       ${CompletionsHTML}
     </article>`;
 };
