@@ -3,16 +3,27 @@
 //finished brews
 //import a function to save the transient state
 
-import { saveBrewSubmission } from "./TransientStates.js"
+import { brewSubmissionIsValid, saveBrewSubmission } from "./TransientStates.js"
 
 
-const handleFinishedBrew = (clickEvent) => {
-    if (clickEvent.target.id === "finishBrew") {
-        saveBrewSubmission()
+const handleFinishedBrew = (clickEvent) =>
+{
+    if(clickEvent.target.id === "finishBrew")
+    {
+        debugger
+        if(brewSubmissionIsValid())
+        {
+            saveBrewSubmission()
+        } else
+        {
+            window.alert("Brew form is not filled")
+        }
+
     }
 }
 
-export const FinishButton = () => {
+export const FinishButton = () =>
+{
     document.addEventListener("click", handleFinishedBrew)
 
     return `<div><button id="finishBrew">Finish</button></div>`
