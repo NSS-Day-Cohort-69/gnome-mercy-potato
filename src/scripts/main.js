@@ -9,7 +9,7 @@
     HTML again.
 */
 
-import { CompleteButton } from "./CompleteButton.js";
+//import { Completions } from "./Completions.js";
 import { GnomeMercy } from "./GnomeMercy.js";
 
 const mainContainer = document.querySelector("#container");
@@ -22,7 +22,7 @@ const render = async () =>
           invoke GnomeMercy component to kick off the conversion
           of state to HTML
       */
-    const mainHTML = await CompleteButton()
+    const mainHTML = await GnomeMercy()
     mainContainer.innerHTML = mainHTML
 };
 
