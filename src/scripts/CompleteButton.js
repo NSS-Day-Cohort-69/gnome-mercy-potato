@@ -29,7 +29,7 @@ export const CompleteButton = () =>
   )
 
   let returnHTML = `<div class="complete-button">`
-  returnHTML += `<button class="complete-button--button" id="submit-request">Submit Request</button>`
+  returnHTML += `<button class="complete-button__button" id="submit-request">Submit Request</button>`
   returnHTML += `</div>`
 
   return returnHTML
