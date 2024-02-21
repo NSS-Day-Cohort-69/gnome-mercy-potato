@@ -148,6 +148,54 @@
       "intendedUse": "asdf",
       "craftTypeId": 1,
       "id": 10
+    },
+    {
+      "name": "bob's slime juice",
+      "intendedUse": "slimes bob",
+      "craftTypeId": 1,
+      "id": 11
+    },
+    {
+      "name": "bob's slime juice",
+      "intendedUse": "slimes bob",
+      "craftTypeId": 1,
+      "id": 12
+    },
+    {
+      "name": "bob's slime juice",
+      "intendedUse": "slimes bob",
+      "craftTypeId": 1,
+      "id": 13
+    },
+    {
+      "name": "bob's slime juice3",
+      "intendedUse": "slimes bob3",
+      "craftTypeId": 1,
+      "id": 14
+    },
+    {
+      "name": "fdsa",
+      "intendedUse": "asdf",
+      "craftTypeId": 1,
+      "id": 15
+    },
+    {
+      "name": "fdsa",
+      "intendedUse": "fdsa",
+      "craftTypeId": 2,
+      "id": 16
+    },
+    {
+      "name": "afaf",
+      "intendedUse": "sdsd",
+      "craftTypeId": 1,
+      "id": 17
+    },
+    {
+      "name": "gaag",
+      "intendedUse": "agag",
+      "craftTypeId": 1,
+      "id": 18
     }
   ],
   "completions": [
@@ -185,41 +233,6 @@
       "crafterId": 2,
       "craftRequestId": 1,
       "id": 7
-    },
-    {
-      "craftRequestedId": 2,
-      "crafterId": 1,
-      "id": 8
-    },
-    {
-      "craftRequestedId": 0,
-      "crafterId": 0,
-      "id": 9
-    },
-    {
-      "craftRequestedId": 0,
-      "crafterId": 0,
-      "id": 10
-    },
-    {
-      "craftRequestedId": 6,
-      "crafterId": "3",
-      "id": 11
-    },
-    {
-      "craftRequestedId": 0,
-      "crafterId": 0,
-      "id": 12
-    },
-    {
-      "craftRequestedId": 0,
-      "crafterId": 0,
-      "id": 13
-    },
-    {
-      "craftRequestedId": 0,
-      "crafterId": 0,
-      "id": 14
     }
   ],
   "craftIngredients": [
@@ -357,6 +370,116 @@
       "ingredientId": "9",
       "completionId": 11,
       "id": 27
+    },
+    {
+      "ingredientId": "1",
+      "completionId": 15,
+      "id": 28
+    },
+    {
+      "ingredientId": "7",
+      "completionId": 15,
+      "id": 29
+    },
+    {
+      "ingredientId": "5",
+      "completionId": 15,
+      "id": 30
+    },
+    {
+      "ingredientId": "4",
+      "completionId": 15,
+      "id": 31
+    },
+    {
+      "ingredientId": "9",
+      "completionId": 15,
+      "id": 32
+    },
+    {
+      "ingredientId": "5",
+      "completionId": 16,
+      "id": 33
+    },
+    {
+      "ingredientId": "6",
+      "completionId": 16,
+      "id": 34
+    },
+    {
+      "ingredientId": "5",
+      "completionId": 17,
+      "id": 35
+    },
+    {
+      "ingredientId": "6",
+      "completionId": 17,
+      "id": 36
+    },
+    {
+      "ingredientId": "2",
+      "completionId": 17,
+      "id": 37
+    },
+    {
+      "ingredientId": "5",
+      "completionId": 18,
+      "id": 38
+    },
+    {
+      "ingredientId": "6",
+      "completionId": 18,
+      "id": 39
+    },
+    {
+      "ingredientId": "2",
+      "completionId": 18,
+      "id": 40
+    },
+    {
+      "ingredientId": "7",
+      "completionId": 18,
+      "id": 41
+    },
+    {
+      "ingredientId": "8",
+      "completionId": 18,
+      "id": 42
+    },
+    {
+      "ingredientId": "4",
+      "completionId": 19,
+      "id": 43
+    },
+    {
+      "ingredientId": "4",
+      "completionId": 20,
+      "id": 44
+    },
+    {
+      "ingredientId": "4",
+      "completionId": 21,
+      "id": 45
+    },
+    {
+      "ingredientId": "4",
+      "completionId": 22,
+      "id": 46
+    },
+    {
+      "ingredientId": "3",
+      "completionId": 22,
+      "id": 47
+    },
+    {
+      "ingredientId": "6",
+      "completionId": 23,
+      "id": 48
+    },
+    {
+      "ingredientId": "7",
+      "completionId": 23,
+      "id": 49
     }
   ]
 }

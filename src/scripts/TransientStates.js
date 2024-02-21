@@ -77,7 +77,7 @@ export const saveCraftSubmission = async () =>
 export const saveBrewSubmission = async () =>
 {
     const brewObject = {
-        craftRequestedId: finishBrewTransientState.craftRequestedId,
+        craftRequestId: finishBrewTransientState.craftRequestedId,
         crafterId: finishBrewTransientState.crafterId
     }
 
