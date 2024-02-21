@@ -4,7 +4,7 @@
     store each choice in transient state.
 */
 
-//import { addBrewIngredientsChoice, removeBrewIngredientsChoice } from "./dataAccess.js"
+import { addBrewIngredientsChoice, removeBrewIngredientChoice } from "./TransientStates.js"
 
 const onIngredientChanged = (event) =>
 {
@@ -13,10 +13,10 @@ const onIngredientChanged = (event) =>
   {
     if(checkbox.checked)
     {
-      //addBrewIngredientsChoice(event.target.value)
+      addBrewIngredientsChoice(event.target.value)
     } else
     {
-      //removeBrewIngredientsChoice(event.target.value)
+      removeBrewIngredientChoice(event.target.value)
     }
   }
 }
