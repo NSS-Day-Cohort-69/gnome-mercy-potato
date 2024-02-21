@@ -4,11 +4,26 @@
     and POST a new item to the API when clicked.
 */
 //import { saveCraftSubmission } from "./dataAccess.js"
-//saveCraftSubmission
+
+const onSubmitRequestPressed = (event) =>
+{
+  if(event.target.id === "submit-request")
+  {
+    /*
+    if(craftSubmissionIsValid)
+    {
+      //saveCraftSubmission()
+    } else
+    {
+      window.alert("Craft submission form is not valid")
+    }
+    */
+  }
+}
 
 export const CompleteButton = () =>
 {
   let returnHTML = `<div class="complete-button">`
-  returnHTML += `<button class="complete-button--"></button>`
+  returnHTML += `<button class="complete-button--button" id="submit-request">Submit Request</button>`
   returnHTML += `</div>`
 }
