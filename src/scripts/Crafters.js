@@ -10,7 +10,7 @@ const onCrafterChosen = (event) =>
 {
   if(event.target.id === "crafter")
   {
-    setBrewCrafterChoice(event.target.value)
+    //setBrewCrafterChoice(event.target.value)
   }
 }
 
