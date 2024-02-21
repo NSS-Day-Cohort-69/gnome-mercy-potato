@@ -3,19 +3,19 @@
     Generate the HTML for the complete requests button,
     and POST a new item to the API when clicked.
 */
-//import { saveCraftSubmission } from "./dataAccess.js"
+import { craftSubmissionIsValid, saveCraftSubmission } from "./TransientStates.js"
 
-const onSubmitRequestPressed = (event) => {
-  if (event.target.id === "submit-request") {
-    /*
-    if(craftSubmissionIsValid)
+const onSubmitRequestPressed = (event) =>
+{
+  if(event.target.id === "submit-request")
+  {
+    if(craftSubmissionIsValid())
     {
-      //saveCraftSubmission()
+      saveCraftSubmission()
     } else
     {
       window.alert("Craft submission form is not valid")
     }
-    */
   }
 };
 
