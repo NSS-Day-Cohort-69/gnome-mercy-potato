@@ -28,9 +28,7 @@ export const CompleteButton = () =>
     onSubmitRequestPressed
   )
 
-  let returnHTML = `<div class="complete-button">`
-  returnHTML += `<button class="complete-button__button" id="submit-request">Submit Request</button>`
-  returnHTML += `</div>`
+  let returnHTML = `<button class="complete-button__button" id="submit-request">Submit Request</button>`
 
   return returnHTML
 }
