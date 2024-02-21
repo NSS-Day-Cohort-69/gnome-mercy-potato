@@ -17,16 +17,12 @@ const onSubmitRequestPressed = (event) =>
       window.alert("Craft submission form is not valid")
     }
   }
-}
+};
 
-export const CompleteButton = () =>
-{
-  document.addEventListener(
-    "mouseup",
-    onSubmitRequestPressed
-  )
+export const CompleteButton = () => {
+  document.addEventListener("mouseup", onSubmitRequestPressed);
 
-  let returnHTML = `<button class="complete-button__button" id="submit-request">Submit Request</button>`
+  let returnHTML = `<button class="complete-button__button " id="submit-request">Submit Request</button>`;
 
-  return returnHTML
-}
+  return returnHTML;
+};
