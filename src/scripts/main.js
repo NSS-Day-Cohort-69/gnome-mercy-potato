@@ -9,7 +9,6 @@
     HTML again.
 */
 
-//import { Completions } from "./Completions.js";
 import { GnomeMercy } from "./GnomeMercy.js";
 
 const mainContainer = document.querySelector("#container");
