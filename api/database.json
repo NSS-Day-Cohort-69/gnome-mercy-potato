@@ -184,6 +184,21 @@
       "craftRequestedId": 2,
       "crafterId": 1,
       "id": 8
+    },
+    {
+      "craftRequestedId": 0,
+      "crafterId": 0,
+      "id": 9
+    },
+    {
+      "craftRequestedId": 0,
+      "crafterId": 0,
+      "id": 10
+    },
+    {
+      "craftRequestedId": 6,
+      "crafterId": "3",
+      "id": 11
     }
   ],
   "craftIngredients": [
@@ -316,6 +331,11 @@
       "ingredientId": 4,
       "completionId": 8,
       "id": 26
+    },
+    {
+      "ingredientId": "9",
+      "completionId": 11,
+      "id": 27
     }
   ]
 }

@@ -1,21 +1,28 @@
 // import { setCraftRequestId } from "./dataAccess.js"
 
+import { setBrewCraftChoice } from "./TransientStates.js"
+
 // Returns an Array of Craft Requests that does NOT include any Requests that have already been completed
-const filterCraftRequests = (craftRequestsArray, completionsArray) => {
+const filterCraftRequests = (craftRequestsArray, completionsArray) =>
+{
   const filteredCraftRequests = []
-  
-  for (const craftRequest of craftRequestsArray) {
+
+  for(const craftRequest of craftRequestsArray)
+  {
     let isCompleted = false
 
     // Checks if the current Craft Request has already been completed
-    for (const completion of completionsArray) {
-      if (completion.craftRequestId === craftRequest.id) {
+    for(const completion of completionsArray)
+    {
+      if(completion.craftRequestId === craftRequest.id)
+      {
         isCompleted = true
         break
       }
     }
 
-    if (isCompleted === false) {
+    if(isCompleted === false)
+    {
       filteredCraftRequests.push(craftRequest)
     }
   }
@@ -24,7 +31,8 @@ const filterCraftRequests = (craftRequestsArray, completionsArray) => {
 }
 
 // Generates the HTML for the dropdown list of Crafting Requests
-const generateDropdownHTML = (craftRequestsArray) => {
+const generateDropdownHTML = (craftRequestsArray) =>
+{
   let craftRequestsHTML = `<h3>Craft Requests</h3>`
 
   craftRequestsHTML += `<select id="craftRequestList">`
@@ -41,7 +49,8 @@ const generateDropdownHTML = (craftRequestsArray) => {
 }
 
 // Generates a filtered dropdown list of Crafting Requests
-export const CraftRequests = async () => {
+export const CraftRequests = async () =>
+{
   const responseForCraftRequests = await fetch("http://localhost:8088/craftRequests")
   const craftRequests = await responseForCraftRequests.json()
 
@@ -56,12 +65,14 @@ export const CraftRequests = async () => {
 }
 
 // Updates transient state to the most recent Craft Request selection
-const changeHandler = (changeEvent) => {
+const changeHandler = (changeEvent) =>
+{
   const eventTarget = changeEvent.target
   const eventTargetValue = parseInt(eventTarget.value)
 
-  if (eventTarget.id === "craftRequestList") {
-    setCraftRequestId(eventTargetValue)
+  if(eventTarget.id === "craftRequestList")
+  {
+    setBrewCraftChoice(eventTargetValue)
   }
 }
 
