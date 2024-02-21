@@ -94,7 +94,7 @@ export const saveBrewSubmission = async () => {
             },
             body: JSON.stringify(objectIngredient)
         }
-        await fetch("ttp://localhost:8088/craftIngredients", ingredientPostOptions)
+        await fetch("http://localhost:8088/craftIngredients", ingredientPostOptions)
     }
 
 }
