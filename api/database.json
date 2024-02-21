@@ -142,6 +142,12 @@
       "intendedUse": "To Use",
       "craftTypeId": 2,
       "id": 9
+    },
+    {
+      "name": "fdsa",
+      "intendedUse": "asdf",
+      "craftTypeId": 1,
+      "id": 10
     }
   ],
   "completions": [
@@ -184,6 +190,36 @@
       "craftRequestedId": 2,
       "crafterId": 1,
       "id": 8
+    },
+    {
+      "craftRequestedId": 0,
+      "crafterId": 0,
+      "id": 9
+    },
+    {
+      "craftRequestedId": 0,
+      "crafterId": 0,
+      "id": 10
+    },
+    {
+      "craftRequestedId": 6,
+      "crafterId": "3",
+      "id": 11
+    },
+    {
+      "craftRequestedId": 0,
+      "crafterId": 0,
+      "id": 12
+    },
+    {
+      "craftRequestedId": 0,
+      "crafterId": 0,
+      "id": 13
+    },
+    {
+      "craftRequestedId": 0,
+      "crafterId": 0,
+      "id": 14
     }
   ],
   "craftIngredients": [
@@ -316,6 +352,11 @@
       "ingredientId": 4,
       "completionId": 8,
       "id": 26
+    },
+    {
+      "ingredientId": "9",
+      "completionId": 11,
+      "id": 27
     }
   ]
 }
