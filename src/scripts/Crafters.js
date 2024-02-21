@@ -4,11 +4,13 @@
     selected, update transient state.
 */
 
+//import { setBrewCrafterChoice } "./TransientState.js"
+
 const onCrafterChosen = (event) =>
 {
   if(event.target.id === "crafter")
   {
-    //transient stuff
+    setBrewCrafterChoice(event.target.value)
   }
 }
 
