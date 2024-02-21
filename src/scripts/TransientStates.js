@@ -9,45 +9,53 @@ let craftRequestTransientState = {
 let finishBrewTransientState = {
     "crafterId": 2,
     "craftRequestedId": 1,
-    "ingredientsId": []
+    "ingredientsId": [1, 2, 3]
 }
 
-export const setCraftNameChoice = (choiceMade) => {
+export const setCraftNameChoice = (choiceMade) =>
+{
     craftRequestTransientState.name = choiceMade
     console.log(craftRequestTransientState)
 }
 
-export const setCraftTypeChoice = (choiceMade) => {
+export const setCraftTypeChoice = (choiceMade) =>
+{
     craftRequestTransientState.craftTypeId = choiceMade
     console.log(craftRequestTransientState)
 }
 
-export const setCraftIntentChoice = (choiceMade) => {
+export const setCraftIntentChoice = (choiceMade) =>
+{
     craftRequestTransientState.intendedUse = choiceMade
     console.log(craftRequestTransientState)
 }
 
-export const setBrewCraftChoice = (choiceMade) => {
+export const setBrewCraftChoice = (choiceMade) =>
+{
     finishBrewTransientState.craftRequestedId = choiceMade
     console.log(finishBrewTransientState)
 }
 
-export const setBrewCrafterChoice = (choiceMade) => {
+export const setBrewCrafterChoice = (choiceMade) =>
+{
     finishBrewTransientState.crafterId = choiceMade
     console.log(finishBrewTransientState)
 }
 
-export const addBrewIngredientsChoice = (choiceMade) => {
+export const addBrewIngredientsChoice = (choiceMade) =>
+{
     finishBrewTransientState.ingredientsId.push(choiceMade)
     console.log(finishBrewTransientState)
 }
 
-export const removeBrewIngredientChoice = (choiceMade) => {
+export const removeBrewIngredientChoice = (choiceMade) =>
+{
     const index = finishBrewTransientState.ingredientsId.indexOf(choiceMade)
     finishBrewTransientState.ingredientsId.splice(index, 1)
 }
 
-export const saveCraftSubmission = async () => {
+export const saveCraftSubmission = async () =>
+{
     const postOptions = {
         method: "POST",
         headers: {
@@ -61,7 +69,8 @@ export const saveCraftSubmission = async () => {
     document.dispatchEvent(customCraftEvent)
 }
 
-export const saveBrewSubmission = async () => {
+export const saveBrewSubmission = async () =>
+{
     const completionObject = {
         craftRequestedId: finishBrewTransientState.craftRequestedId,
         crafterId: finishBrewTransientState.crafterId
@@ -74,7 +83,7 @@ export const saveBrewSubmission = async () => {
         body: JSON.stringify(completionObject)
     }
     const response = await fetch("http://localhost:8088/completions", postOptions)
-    
+
 
     const finishedBrewEvent = new CustomEvent("newBrewCreated")
     document.dispatchEvent(finishedBrewEvent)
@@ -82,7 +91,8 @@ export const saveBrewSubmission = async () => {
     const completionsArray = await fetch("http://localhost:8088/completions").then(res => res.json())
     const completionsLength = completionsArray.length
 
-    for (const ingredientId of finishBrewTransientState.ingredientsId) {
+    for(const ingredientId of finishBrewTransientState.ingredientsId)
+    {
         const objectIngredient = {
             ingredientId: ingredientId,
             completionId: completionsLength
@@ -94,7 +104,7 @@ export const saveBrewSubmission = async () => {
             },
             body: JSON.stringify(objectIngredient)
         }
-        await fetch("ttp://localhost:8088/craftIngredients", ingredientPostOptions)
+        await fetch("http://localhost:8088/craftIngredients", ingredientPostOptions)
     }
 
 }
