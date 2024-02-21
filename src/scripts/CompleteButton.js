@@ -22,7 +22,7 @@ const onSubmitRequestPressed = (event) => {
 export const CompleteButton = () => {
   document.addEventListener("mouseup", onSubmitRequestPressed);
 
-  let returnHTML = `<button class="complete-button__button formSection" id="submit-request">Submit Request</button>`;
+  let returnHTML = `<button class="complete-button__button " id="submit-request">Submit Request</button>`;
 
   return returnHTML;
 };
