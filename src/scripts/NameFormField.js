@@ -1,7 +1,8 @@
+import { setCraftNameChoice } from "./TransientStates.js";
+
 document.addEventListener("change", (event) => {
   if (event.target.dataset.id === "name") {
-    // Pretend the console.log, is our future transient edit.
-    console.log(event.target.value);
+    setCraftNameChoice(event.target.value);
   }
 });
 

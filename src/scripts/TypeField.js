@@ -1,3 +1,5 @@
+import { setCraftTypeChoice } from "./TransientStates.js";
+
 document.addEventListener("change", (event) => {
   if (event.target.dataset.id === "TypeFieldForm") {
     setCraftTypeChoice(parseInt(event.target.value));

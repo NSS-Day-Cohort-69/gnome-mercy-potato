@@ -1,7 +1,8 @@
+import { setCraftIntentChoice } from "./TransientStates.js";
+
 document.addEventListener("change", (event) => {
   if (event.target.dataset.id === "purpose") {
-    // Pretend the console.log, is our future transient edit.
-    console.log(event.target.value);
+    setCraftIntentChoice(event.target.value);
   }
 });
 
