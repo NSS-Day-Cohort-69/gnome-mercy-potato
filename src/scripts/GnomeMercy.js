@@ -16,7 +16,9 @@ export const GnomeMercy = async () => {
 
   return `
     <h1>Gnome Mercy</h1>
-    ${requestFormHTML}
+    <article class="formSection" id="form">
+      ${requestFormHTML}
+    </article>
     
     <article class="formSection" id="crafting">
       ${CraftFormHTML}
