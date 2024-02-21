@@ -5,26 +5,18 @@
     components.
 */
 
-import { CraftRequests } from "./CraftRequests.js";
 import { Completions } from "./Completions.js";
-import { NameFormField } from "./NameFormField.js";
-import { PurposeFormField } from "./PurposeFormField.js";
-import { TypeField } from "./TypeField.js";
 import { CraftForm } from "./CraftForm.js";
+import { RequestForm } from "./RequestForm.js";
 
 export const GnomeMercy = async () => {
   const CraftFormHTML = await CraftForm();
-  const craftRequestsHTML = await CraftRequests();
   const CompletionsHTML = await Completions();
-  const brewTypeField = await TypeField();
+  const requestFormHTML = await RequestForm();
 
   return `
     <h1>Gnome Mercy</h1>
-    <div id="request" class="flex column">
-      ${NameFormField()}
-      ${PurposeFormField()}
-      ${brewTypeField}
-    </div>
+    ${requestFormHTML}
     
     <article class="formSection" id="crafting">
       ${CraftFormHTML}
