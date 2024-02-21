@@ -7,8 +7,8 @@ let craftRequestTransientState = {
 }
 
 let finishBrewTransientState = {
-    "crafterId": 2,
-    "craftRequestedId": 1,
+    "crafterId": 0,
+    "craftRequestedId": 0,
     "ingredientsId": []
 }
 
@@ -66,6 +66,10 @@ export const saveBrewSubmission = async () => {
         craftRequestedId: finishBrewTransientState.craftRequestedId,
         crafterId: finishBrewTransientState.crafterId
     }
+    if (completionObject.craftRequestedId === undefined || completionObject.crafterId === undefined) {
+        window.alert("Invalid completion or crafter")
+        return
+    }
     const postOptions = {
         method: "POST",
         headers: {
@@ -73,7 +77,7 @@ export const saveBrewSubmission = async () => {
         },
         body: JSON.stringify(completionObject)
     }
-    const response = await fetch("http://localhost:8088/completions", postOptions)
+    await fetch("http://localhost:8088/completions", postOptions)
     
 
     const finishedBrewEvent = new CustomEvent("newBrewCreated")

@@ -218,6 +218,16 @@
       "craftRequestedId": 1,
       "crafterId": 2,
       "id": 16
+    },
+    {
+      "craftRequestedId": 1,
+      "crafterId": 2,
+      "id": 17
+    },
+    {
+      "craftRequestedId": 0,
+      "crafterId": 0,
+      "id": 18
     }
   ],
   "craftIngredients": [
