@@ -1,10 +1,3 @@
-/*
-  Responsibility
-    Generate the entire HTML string template for 
-    Gnome Mercy by using all other HTML generation
-    components.
-*/
-
 import { Completions } from "./Completions.js";
 import { CraftForm } from "./CraftForm.js";
 import { RequestForm } from "./RequestForm.js";

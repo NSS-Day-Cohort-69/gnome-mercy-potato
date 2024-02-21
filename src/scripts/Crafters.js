@@ -1,9 +1,3 @@
-/*
-  Responsibility
-    Generate HTML for the dropdown of crafters. When one is
-    selected, update transient state.
-*/
-
 import { setBrewCrafterChoice } from "./TransientStates.js";
 
 const onCrafterChosen = (event) => {
