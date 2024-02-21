@@ -66,7 +66,7 @@ export const saveBrewSubmission = async () => {
         craftRequestedId: finishBrewTransientState.craftRequestedId,
         crafterId: finishBrewTransientState.crafterId
     }
-    if (completionObject.craftRequestedId === undefined || completionObject.crafterId === undefined) {
+    if (completionObject.craftRequestedId === 0 || completionObject.crafterId === 0) {
         window.alert("Invalid completion or crafter")
         return
     }
