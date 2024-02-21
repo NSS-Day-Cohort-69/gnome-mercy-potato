@@ -3,11 +3,12 @@
 //finished brews
 //import a function to save the transient state
 
-// import {WhateverSavesTheTransientState} from "./dataAccess.js" //NEEDS REAL FUNCTION NAME
+import { saveBrewSubmission } from "./TransientStates.js"
+
 
 const handleFinishedBrew = (clickEvent) => {
     if (clickEvent.target.id === "finishBrew") {
-        // WhateverSavesTheTransientState()                    //NEEDS REAL FUNCTION NAME
+        saveBrewSubmission()
     }
 }
 
